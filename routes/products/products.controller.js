@@ -11,4 +11,12 @@ export class ProductsController {
             products: products
         })
     }
+
+    getProductsUnder50 = async (req, res) => {
+        const products = await this.repository.getProductsUnder50();
+
+        res.send({
+            products: products
+        })
+    }
 }

@@ -8,7 +8,10 @@ const controller = new ProductsController(repository);
 
 const router = express.Router()
 
-// endpoint 
+// endpoint todos los productos
 router.get("/", controller.getAllProducts);
+
+// endpoint productos precio < 50
+router.get("/under-50", controller.getProductsUnder50);
 
 export default router;
